@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const sephoraParser = require('./parser/parser.js');
 
 async function _fetchJSONScript() {
-    const res = await fetch('https://www.sephora.com/ca/en/shop/skincare');
+    const res = await fetch('https://www.sephora.com.br/skincare/');
     const html = await res.text();
     // TODO: import the parser and use the parser here.
     const script = sephoraParser(html);
